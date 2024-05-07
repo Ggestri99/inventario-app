@@ -1,1 +1,24 @@
-<p>producto-agregar works!</p>
+<div class="container">
+    <div class="container text-center" style="margin: 30px;">
+        <h3>Agregar Producto</h3>
+    </div>
+    <form [formGroup]="form" (ngSubmit)="submit()">
+        <div class="mb-3">
+            <label class="form-label">Descrpcion del producto</label>
+            <input class="form-control" formControlName="descripcion">
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Precio</label>
+            <input formControlName="precio" type="number" class="form-control">
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Existencia</label>
+            <input formControlName="existencia" type="number" class="form-control" id="">
+        </div>
+        <div class="text-center">
+            <button type="submit" class="btn btn-warning btn-sm me-3">Agregar</button>
+            <a href="/" class="btn btn-danger btn-sm">Regresar</a>
+        </div>
+
+    </form>
+</div>

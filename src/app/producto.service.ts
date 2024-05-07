@@ -14,8 +14,12 @@ export class ProductoService {
     private http: HttpClient,
   ) { }
 
-  getProductos():Observable<Producto[]> {
+  getProductos(): Observable<Producto[]> {
     return this.http.get<Producto[]>(this.urlBase)
+  }
+
+  addProducto(producto: any):Observable<Object> {
+    return this.http.post(this.urlBase,producto)
   }
 
 

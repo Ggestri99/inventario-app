@@ -15,7 +15,12 @@ export const routes: Routes = [
     },
     {
         path: '',
-        component: ProductoListaComponent,
+        redirectTo: 'inicio',
+        pathMatch: 'full'
+    },
+    {
+        path: '**',
+        redirectTo: 'inicio',
         pathMatch: 'full'
     }
 
