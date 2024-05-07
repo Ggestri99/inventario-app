@@ -1,6 +1,6 @@
 <div class="container">
     <div class="container text-center" style="margin: 30px;">
-        <h3>producto-lista works!</h3>
+        <h3>Listado de productos</h3>
     </div>
     <table class="table table-striped table-hover align-middle">
         <thead class="table-dark">
@@ -12,16 +12,14 @@
             </tr>
         </thead>
         <tbody>
-            <tr>
-                <th scope="row">1</th>
-                <td>Mark</td>
-                <td>Otto</td>
-            </tr>
-            <tr>
-                <th scope="row">2</th>
-                <td>Jacob</td>
-                <td>Thornton</td>
-            </tr>
+            @for (item of productos; track item.idProducto) {
+                <tr>
+                    <th scope="row">{{item.idProducto}}</th>
+                    <td>{{item.descripcion}}</td>
+                    <td>{{item.precio}}</td>
+                    <td>{{item.existencia}}</td>
+                </tr>
+            }
         </tbody>
     </table>
 </div>
